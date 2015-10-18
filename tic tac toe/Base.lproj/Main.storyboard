@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rln-vL-gET">
-                                <rect key="frame" x="508" y="390" width="360" height="86"/>
+                                <rect key="frame" x="508" y="388" width="360" height="86"/>
                                 <animations/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Spielen"/>
@@ -35,23 +35,23 @@
                                     <segue destination="dnA-1B-OM1" kind="show" id="UM5-5O-Bk8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-ui-luh">
-                                <rect key="frame" x="508" y="533" width="360" height="86"/>
-                                <animations/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Einstellung"/>
-                                <connections>
-                                    <segue destination="O7i-rY-dYd" kind="show" id="fFL-3z-Vni"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6j-x7-eVs">
-                                <rect key="frame" x="508" y="676" width="360" height="86"/>
+                                <rect key="frame" x="508" y="674" width="360" height="86"/>
                                 <animations/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Beenden"/>
                                 <connections>
                                     <action selector="closeApp:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="WtM-Eg-bXZ"/>
                                     <action selector="closeApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQm-zT-rPc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-ui-luh">
+                                <rect key="frame" x="508" y="531" width="360" height="86"/>
+                                <animations/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Einstellung"/>
+                                <connections>
+                                    <segue destination="O7i-rY-dYd" kind="show" id="L6Z-Uw-WYf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,10 +65,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="UHN-ui-luh" secondAttribute="trailing" constant="1032" id="AKv-ge-9DN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E6j-x7-eVs" secondAttribute="trailing" constant="1032" id="Bmj-cs-cBD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zdi-6e-rpQ" secondAttribute="trailing" constant="500" id="ChB-HL-Edn"/>
-                            <constraint firstItem="rln-vL-gET" firstAttribute="top" secondItem="Zdi-6e-rpQ" secondAttribute="bottom" constant="52" id="DwV-DA-fid"/>
                             <constraint firstItem="Zdi-6e-rpQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="500" id="bsz-3D-VGb"/>
+                            <constraint firstItem="rln-vL-gET" firstAttribute="top" secondItem="Zdi-6e-rpQ" secondAttribute="bottom" constant="50" id="jBy-FN-qBy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rln-vL-gET" secondAttribute="trailing" constant="1032" id="jLm-qb-gmC"/>
                             <constraint firstItem="E6j-x7-eVs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="488" id="jS2-K7-6BL"/>
+                            <constraint firstItem="rln-vL-gET" firstAttribute="top" secondItem="Zdi-6e-rpQ" secondAttribute="bottom" constant="50" id="qiS-Uj-HSg"/>
                             <constraint firstItem="Zdi-6e-rpQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="th4-RX-q56"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zdi-6e-rpQ" secondAttribute="bottom" constant="742" id="zzh-VO-I1S"/>
                         </constraints>
@@ -89,19 +90,7 @@
                     <view key="view" contentMode="scaleToFill" id="HaI-Ir-LaW">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-eT-Z7v">
-                                <rect key="frame" x="1654" y="48" width="202" height="86"/>
-                                <animations/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Zurück"/>
-                            </button>
-                        </subviews>
                         <animations/>
-                        <constraints>
-                            <constraint firstItem="Ygu-eT-Z7v" firstAttribute="top" secondItem="xbZ-pO-FRd" secondAttribute="bottom" constant="48" id="PLv-86-tBn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ygu-eT-Z7v" secondAttribute="trailing" constant="44" id="ubc-1z-HBj"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uD-QO-AIM" userLabel="First Responder" sceneMemberID="firstResponder"/>

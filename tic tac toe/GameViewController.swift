@@ -47,22 +47,16 @@ class GameViewController: UIViewController {
         }
         if (isWinner(1))
         {
-            let alertView = UIAlertController(title: "Herzlichen Glückwunsch", message: "Spieler 1 hat gewonnen!",preferredStyle: .Alert)
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                // ...
-            }
-            alertView.addAction(OKAction)
-            self.presentViewController(alertView, animated: true, completion: nil)
-
-            
+            self.showDialog("Herzlichen Glückwunsch", description: "Spieler 1 hat gewonnen.");
+            self.disableButtons();
         } else if (isWinner(2))
         {
-            let alertView = UIAlertController(title: "Herzlichen Glückwunsch", message: "Spieler 2 hat gewonnen!",preferredStyle: .Alert)
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                // ...
-            }
-            alertView.addAction(OKAction)
-            self.presentViewController(alertView, animated: true, completion: nil)
+            self.showDialog("Herzlichen Glückwunsch", description: "Spieler 2 hat gewonnen.");
+            self.disableButtons();
+        } else if (isAllSet())
+        {
+            self.showDialog("Spiel beendet", description:"Unentschieden");
+            self.disableButtons();
         }
         
     }
@@ -75,6 +69,7 @@ class GameViewController: UIViewController {
             button.setTitle("",forState: .Normal);
             button.setTitleColor(UIColor.blackColor(), forState: .Normal);
         }
+        self.enableButtons();
         lastUser = 1;
     }
     
@@ -133,4 +128,53 @@ class GameViewController: UIViewController {
         
         return false;
     }
+    
+    
+    func isAllSet() -> Bool
+    {
+        for value in selectedArray
+        {
+            if (value == 0)
+            {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    func showDialog(subject:String, description:String)
+    {
+        let alertView = UIAlertController(title: subject, message: description,preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            // ...
+        }
+        alertView.addAction(OKAction)
+        let newGameAction = UIAlertAction(title: "Neues Spiel", style: .Default) { (action) in
+            // ...
+            self.newGame(NSNull());
+        }
+        alertView.addAction(newGameAction)
+        self.presentViewController(alertView, animated: true, completion: nil)
+    }
+    
+    func disableButtons()
+    {
+        for buttonID in 1000...1008
+        {
+            let button :UIButton = self.view.viewWithTag(buttonID) as! UIButton;
+            button.enabled = false;
+        }
+    }
+    
+    func enableButtons()
+    {
+        for buttonID in 1000...1008
+        {
+            let button :UIButton = self.view.viewWithTag(buttonID) as! UIButton;
+            button.enabled = true;
+        }
+    }
+    
+    
 }
