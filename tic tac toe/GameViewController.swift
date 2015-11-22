@@ -47,11 +47,16 @@ class GameViewController: UIViewController {
         }
         if (isWinner(1))
         {
-            self.showDialog("Herzlichen Glückwunsch", description: "Spieler 1 hat gewonnen.");
+            var desc = SettingsManager.sharedInstance().getNamePlayer1();
+            desc = desc + " hat gewonnen.";
+            
+            self.showDialog("Herzlichen Glückwunsch", description: desc);
             self.disableButtons();
         } else if (isWinner(2))
         {
-            self.showDialog("Herzlichen Glückwunsch", description: "Spieler 2 hat gewonnen.");
+            var desc = SettingsManager.sharedInstance().getNamePlayer2();
+            desc = desc + " hat gewonnen.";
+            self.showDialog("Herzlichen Glückwunsch", description: desc);
             self.disableButtons();
         } else if (isAllSet())
         {
