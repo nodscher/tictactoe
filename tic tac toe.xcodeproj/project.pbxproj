@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E12043BE1BD28FA30042A843 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12043BD1BD28FA30042A843 /* GameViewController.swift */; };
+		E12043BE1BD28FA30042A843 /* GameStandardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12043BD1BD28FA30042A843 /* GameStandardViewController.swift */; };
 		E12043C01BD290630042A843 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12043BF1BD290630042A843 /* SettingsViewController.swift */; };
 		E19FB4671BD2831800451106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB4661BD2831800451106 /* AppDelegate.swift */; };
 		E19FB4691BD2831800451106 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB4681BD2831800451106 /* StartViewController.swift */; };
 		E19FB46C1BD2831800451106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19FB46A1BD2831800451106 /* Main.storyboard */; };
 		E19FB46E1BD2831800451106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19FB46D1BD2831800451106 /* Assets.xcassets */; };
 		E1E4F25E1C020E0300293E3F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E4F25D1C020E0300293E3F /* SettingsManager.swift */; };
+		E1E589891C25855C00C2C784 /* GameExtendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E589881C25855C00C2C784 /* GameExtendedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E12043BD1BD28FA30042A843 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E12043BD1BD28FA30042A843 /* GameStandardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStandardViewController.swift; sourceTree = "<group>"; };
 		E12043BF1BD290630042A843 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E19FB4631BD2831800451106 /* tic tac toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic tac toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19FB4661BD2831800451106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		E19FB46D1BD2831800451106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E19FB46F1BD2831800451106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E4F25D1C020E0300293E3F /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		E1E589881C25855C00C2C784 /* GameExtendedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameExtendedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,8 @@
 				E19FB4661BD2831800451106 /* AppDelegate.swift */,
 				E1E4F25D1C020E0300293E3F /* SettingsManager.swift */,
 				E19FB4681BD2831800451106 /* StartViewController.swift */,
-				E12043BD1BD28FA30042A843 /* GameViewController.swift */,
+				E12043BD1BD28FA30042A843 /* GameStandardViewController.swift */,
+				E1E589881C25855C00C2C784 /* GameExtendedViewController.swift */,
 				E12043BF1BD290630042A843 /* SettingsViewController.swift */,
 				E19FB46A1BD2831800451106 /* Main.storyboard */,
 				E19FB46D1BD2831800451106 /* Assets.xcassets */,
@@ -142,7 +145,8 @@
 			files = (
 				E19FB4691BD2831800451106 /* StartViewController.swift in Sources */,
 				E1E4F25E1C020E0300293E3F /* SettingsManager.swift in Sources */,
-				E12043BE1BD28FA30042A843 /* GameViewController.swift in Sources */,
+				E1E589891C25855C00C2C784 /* GameExtendedViewController.swift in Sources */,
+				E12043BE1BD28FA30042A843 /* GameStandardViewController.swift in Sources */,
 				E19FB4671BD2831800451106 /* AppDelegate.swift in Sources */,
 				E12043C01BD290630042A843 /* SettingsViewController.swift in Sources */,
 			);

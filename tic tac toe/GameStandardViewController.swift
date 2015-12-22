@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameStandardViewController: UIViewController {
     
     var selectedArray: [NSInteger] = [0,0,0,0,0,0,0,0,0];
     var lastUser: NSInteger = 1;
