@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E12043BE1BD28FA30042A843 /* GameStandardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12043BD1BD28FA30042A843 /* GameStandardViewController.swift */; };
 		E12043C01BD290630042A843 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12043BF1BD290630042A843 /* SettingsViewController.swift */; };
+		E19CC6371C4179AC007DF322 /* FigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CC6361C4179AC007DF322 /* FigureViewController.swift */; };
 		E19FB4671BD2831800451106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB4661BD2831800451106 /* AppDelegate.swift */; };
 		E19FB4691BD2831800451106 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB4681BD2831800451106 /* StartViewController.swift */; };
 		E19FB46C1BD2831800451106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19FB46A1BD2831800451106 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		E12043BD1BD28FA30042A843 /* GameStandardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStandardViewController.swift; sourceTree = "<group>"; };
 		E12043BF1BD290630042A843 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E19CC6361C4179AC007DF322 /* FigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigureViewController.swift; sourceTree = "<group>"; };
 		E19FB4631BD2831800451106 /* tic tac toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic tac toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19FB4661BD2831800451106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19FB4681BD2831800451106 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E12043BD1BD28FA30042A843 /* GameStandardViewController.swift */,
 				E1E589881C25855C00C2C784 /* GameExtendedViewController.swift */,
 				E12043BF1BD290630042A843 /* SettingsViewController.swift */,
+				E19CC6361C4179AC007DF322 /* FigureViewController.swift */,
 				E19FB46A1BD2831800451106 /* Main.storyboard */,
 				E19FB46D1BD2831800451106 /* Assets.xcassets */,
 				E19FB46F1BD2831800451106 /* Info.plist */,
@@ -148,6 +151,7 @@
 				E1E589891C25855C00C2C784 /* GameExtendedViewController.swift in Sources */,
 				E12043BE1BD28FA30042A843 /* GameStandardViewController.swift in Sources */,
 				E19FB4671BD2831800451106 /* AppDelegate.swift in Sources */,
+				E19CC6371C4179AC007DF322 /* FigureViewController.swift in Sources */,
 				E12043C01BD290630042A843 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

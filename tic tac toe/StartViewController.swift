@@ -21,6 +21,19 @@ class StartViewController: UIViewController {
     }
 
 
+    @IBAction func startGame(sender: AnyObject) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        var controlerId = "game_4x4";
+        
+        if (SettingsManager.sharedInstance().getNumberOfFields() == GlobalConstants.GAME_3x3)
+        {
+            controlerId = "game_3x3";
+        }
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier(controlerId) as UIViewController
+        
+        self.presentViewController(nextViewController, animated:true, completion:nil)
+    }
     @IBAction func closeApp(sender: AnyObject) {
         exit(0);
     }

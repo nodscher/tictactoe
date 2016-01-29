@@ -10,7 +10,7 @@ import UIKit
 
 class GameExtendedViewController: UIViewController {
     
-    var selectedArray: [NSInteger] = [0,0,0,0,0,0,0,0,0];
+    var selectedArray: [NSInteger] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     var lastUser: NSInteger = 1;
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class GameExtendedViewController: UIViewController {
     @IBAction func setItem(sender: UIButton)
     {
         var sign :String = "";
-        let tag : NSInteger = sender.tag - 1000;
+        let tag : NSInteger = sender.tag - 2000;
         if (tag < selectedArray.count)
         {
             if (selectedArray[tag] == 0)
@@ -67,10 +67,10 @@ class GameExtendedViewController: UIViewController {
     }
     
     @IBAction func newGame(sender: AnyObject) {
-        selectedArray = [0,0,0,0,0,0,0,0,0];
-        for i in 0...8
+        selectedArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        for i in 0...15
         {
-            let button :UIButton = self.view.viewWithTag(1000+i) as! UIButton;
+            let button :UIButton = self.view.viewWithTag(2000+i) as! UIButton;
             button.setTitle("",forState: .Normal);
             button.setTitleColor(UIColor.blackColor(), forState: .Normal);
         }
@@ -89,45 +89,51 @@ class GameExtendedViewController: UIViewController {
     func setButtonTextColorToRed(buttonIDs : [NSInteger]) {
         for buttonID in buttonIDs
         {
-            let button :UIButton = self.view.viewWithTag(1000+buttonID) as! UIButton;
+            let button :UIButton = self.view.viewWithTag(2000+buttonID) as! UIButton;
             button.setTitleColor(UIColor.redColor(), forState: .Normal);
         }
     }
     
     func isWinner(user:NSInteger) -> Bool
     {
-        if ((selectedArray[0] == user) && (selectedArray[3] == user) && (selectedArray[6] == user))
+        if ((selectedArray[0] == user) && (selectedArray[5] == user) && (selectedArray[10] == user) && (selectedArray[15] == user))
         {
-            setButtonTextColorToRed([0,3,6]);
+            setButtonTextColorToRed([0,5,10,15]);
             return true;
-        } else if ((selectedArray[1] == user) && (selectedArray[4] == user) && (selectedArray[7] == user))
+        } else if ((selectedArray[3] == user) && (selectedArray[6] == user) && (selectedArray[9] == user) && (selectedArray[12] == user))
         {
-            setButtonTextColorToRed([1,4,7]);
+            setButtonTextColorToRed([3,6,9,12]);
             return true;
-        } else if ((selectedArray[2] == user) && (selectedArray[5] == user) && (selectedArray[8] == user))
+        } else if ((selectedArray[0] == user) && (selectedArray[4] == user) && (selectedArray[8] == user) && (selectedArray[12] == user))
         {
-            setButtonTextColorToRed([2,5,8]);
+            setButtonTextColorToRed([0,4,8,12]);
             return true;
-        } else if ((selectedArray[0] == user) && (selectedArray[1] == user) && (selectedArray[2] == user))
+        } else if ((selectedArray[0] == user) && (selectedArray[1] == user) && (selectedArray[2] == user) && (selectedArray[3] == user))
         {
-            setButtonTextColorToRed([0,1,2]);
+            setButtonTextColorToRed([0,1,2,3]);
             return true;
-        } else if ((selectedArray[3] == user) && (selectedArray[4] == user) && (selectedArray[5] == user))
+        } else if ((selectedArray[4] == user) && (selectedArray[5] == user) && (selectedArray[6] == user) && (selectedArray[7] == user))
         {
-            setButtonTextColorToRed([3,4,5]);
+            setButtonTextColorToRed([4,5,6,7]);
             return true;
-        } else if ((selectedArray[6] == user) && (selectedArray[7] == user) && (selectedArray[8] == user))
+        } else if ((selectedArray[2] == user) && (selectedArray[6] == user) && (selectedArray[10] == user) && (selectedArray[4] == user))
         {
-            setButtonTextColorToRed([6,7,8]);
+        
+            setButtonTextColorToRed([2,6,10,14]);
             return true;
-        } else if ((selectedArray[0] == user) && (selectedArray[4] == user) && (selectedArray[8] == user))
+        } else if ((selectedArray[8] == user) && (selectedArray[9] == user) && (selectedArray[10] == user) && (selectedArray[11] == user))
         {
-            setButtonTextColorToRed([0,4,8]);
+            setButtonTextColorToRed([8,9,10,11]);
             return true;
-        } else if ((selectedArray[2] == user) && (selectedArray[4] == user) && (selectedArray[6] == user))
+        } else if ((selectedArray[3] == user) && (selectedArray[7] == user) && (selectedArray[11] == user) && (selectedArray[15] == user))
         {
-            setButtonTextColorToRed([2,4,6]);
+            setButtonTextColorToRed([3,7,11,15]);
             return true;
+        } else if ((selectedArray[12] == user) && (selectedArray[13] == user) && (selectedArray[14] == user) && (selectedArray[15] == user))
+        {
+            setButtonTextColorToRed([12,13,14,15]);
+            return true;
+
         }
         
         
@@ -165,7 +171,7 @@ class GameExtendedViewController: UIViewController {
     
     func disableButtons()
     {
-        for buttonID in 1000...1008
+        for buttonID in 2000...2015
         {
             let button :UIButton = self.view.viewWithTag(buttonID) as! UIButton;
             button.enabled = false;
@@ -174,7 +180,7 @@ class GameExtendedViewController: UIViewController {
     
     func enableButtons()
     {
-        for buttonID in 1000...1008
+        for buttonID in 2000...2015
         {
             let button :UIButton = self.view.viewWithTag(buttonID) as! UIButton;
             button.enabled = true;
